@@ -50,11 +50,14 @@
       padding: 14px 16px; display: flex; align-items: center; gap: 10px;
     }
     #kai-avatar {
-      width: 36px; height: 36px; border-radius: 50%;
-      background: rgba(255,255,255,0.2);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 16px; font-weight: 600; color: #fff; flex-shrink: 0;
-    }
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(255,255,255,0.95);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; overflow: hidden; padding: 4px;
+}
+
+#kai-avatar img { width: 100%; height: 100%; object-fit: contain; }
+
     #kai-header-text { flex: 1; }
     #kai-name { font-size: 14px; font-weight: 600; margin: 0; }
     #kai-status { font-size: 11px; opacity: 0.8; margin: 0; display: flex; align-items: center; gap: 4px; }
@@ -122,19 +125,16 @@
     #kai-input:focus { border-color: ${BRAND}; }
     #kai-input::placeholder { color: #9ab8b5; }
     #kai-send {
-      width: 36px; height: 36px; border-radius: 10px; border: none;
+      width: 44px; height: 44px; border-radius: 10px; border: none;
       background: ${BRAND}; color: #fff; cursor: pointer; flex-shrink: 0;
       display: flex; align-items: center; justify-content: center;
       align-self: flex-end;
       transition: background 0.15s;
     }
     #kai-send:hover { background: ${BRAND_D}; }
-    #kai-send svg { width: 16px; height: 16px; fill: #fff; }
+    #kai-send svg { width: 20px; height: 20px; fill: #fff; }
 
-    #kai-footer {
-      text-align: center; font-size: 10px; color: #9ab8b5;
-      padding: 0 0 10px; letter-spacing: 0.02em;
-    }
+   
     .kai-notice {
       font-size: 10px; color: #9ab8b5; text-align: center;
       padding: 4px 12px; line-height: 1.4; align-self: center;
@@ -153,6 +153,13 @@
         right: 16px; bottom: 16px;
         transition: background 0.2s, transform 0.2s, opacity 0.2s;
       }
+
+      #kai-dot {
+      position: absolute; top: 2px; right: 2px;
+      width: 13px; height: 13px; border-radius: 50%;
+      background: #e53e3e; border: 2px solid #fff;
+      }
+      
       #kai-btn.kai-hidden { opacity: 0; pointer-events: none; }
     }
   `;
@@ -160,7 +167,8 @@
 
   // ── HTML ──────────────────────────────────────────────────────────────────
   document.body.insertAdjacentHTML('beforeend', `
-    <button id="kai-btn" aria-label="Chat with Kai">
+    <button id="kai-btn" aria-label="Chat with Kai" style="position:relative;">
+  <span id="kai-dot"></span>
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path d="M20 2H4C2.9 2 2 2.9 2 4v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
       </svg>
@@ -168,11 +176,14 @@
 
     <div id="kai-panel" role="dialog" aria-label="Chat with Kai">
       <div id="kai-header">
-        <div id="kai-avatar">K</div>
-        <div id="kai-header-text">
-          <p id="kai-name">KAi</p>
+      
+       <div id="kai-avatar"><img src="/header-logo.svg" alt="Katwal Digital" /></div>
+      
+      <div id="kai-header-text">
+          <p id="kai-name">Kai <span style="background:rgba(255,255,255,0.2);font-size:9px;padding:2px 7px;border-radius:20px;font-weight:500;letter-spacing:0.05em;vertical-align:middle;">AI</span> <span style="font-size:10px;font-weight:400;opacity:0.75;letter-spacing:0.03em;">Beta</span></p>
           <p id="kai-status">Online — Katwal Digital</p>
-        </div>
+      </div>
+      
         <button id="kai-close" aria-label="Close chat">×</button>
       </div>
 
@@ -180,12 +191,11 @@
 
       <div id="kai-input-row">
         <textarea id="kai-input" placeholder="Ask me anything…" rows="1" aria-label="Your message"></textarea>
-        <button id="kai-send" aria-label="Send">
+        <button id="kai-send" tabindex="-1" aria-label="Send">
           <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
         </button>
       </div>
-      <div id="kai-footer">Katwal Digital AI Assistant</div>
-    </div>
+     
   `);
 
   // ── DOM refs ──────────────────────────────────────────────────────────────
@@ -219,6 +229,9 @@ if (window.visualViewport) {
     btn.classList.add('kai-hidden');
     document.body.style.overflow = 'hidden';
   }
+    const dot = document.getElementById('kai-dot');
+if (dot) dot.style.display = 'none';
+    
   input.focus();
   setTimeout(() => input.scrollIntoView({ block: 'nearest' }), 300);
   if (!opened) {
@@ -322,6 +335,7 @@ input.focus();
 
   // ── Input handling ────────────────────────────────────────────────────────
   sendBtn.addEventListener('click', send);
+  sendBtn.addEventListener('mousedown', (e) => e.preventDefault());
 
   input.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' && !e.shiftKey) {
