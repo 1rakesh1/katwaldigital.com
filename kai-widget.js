@@ -275,25 +275,11 @@ if (window.visualViewport) {
     document.getElementById('kai-typing')?.remove();
   }
   
-   function scrollBottom() {
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        msgBox.scrollTop = msgBox.scrollHeight;
-      });
-    });
+  function scrollBottom() {
+  const last = msgBox.lastElementChild;
+  if (last) last.scrollIntoView({ block: 'end' });
   }
   
-  const scrollObserver = new MutationObserver(() => {
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        msgBox.scrollTop = msgBox.scrollHeight;
-      });
-    });
-  });
-
-  
-  scrollObserver.observe(msgBox, { childList: true, subtree: true });
-
   async function send() {
     const text = input.value.trim();
     if (!text) return;
