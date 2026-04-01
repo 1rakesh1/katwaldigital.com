@@ -201,7 +201,7 @@
     setTimeout(() => input.scrollIntoView({ block: 'nearest' }), 300);
     if (!opened) {
       opened = true;
-      addNotice("🔒 Chats may be reviewed to help us improve. We never share your data.");
+      addNotice("🔒 Chats may be reviewed to help us improve.");
       addBotMsg("Hi! I'm Kai 👋 I can tell you about Katwal Digital's services and pricing — or help you get started. What brings you here today?");
     }
   }
