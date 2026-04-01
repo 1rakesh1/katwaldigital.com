@@ -9,7 +9,7 @@
 
 (function () {
   // ─── CONFIG ───────────────────────────────────────────────────────────────
-  const WORKER_URL = 'https://YOUR_WORKER.YOUR_SUBDOMAIN.workers.dev';
+  const WORKER_URL = 'https://kai.mail-rkjw.workers.dev/';
   const BRAND     = '#1A7A70';
   const BRAND_D   = '#145f57';
   // ──────────────────────────────────────────────────────────────────────────
