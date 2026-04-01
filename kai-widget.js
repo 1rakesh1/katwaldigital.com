@@ -287,8 +287,9 @@ if (window.visualViewport) {
     if (!text) return;
 
     input.value = '';
-    input.style.height = 'auto';
-    sendBtn.disabled = true;
+input.style.height = 'auto';
+sendBtn.style.opacity = '0.5';
+sendBtn.style.pointerEvents = 'none';
 
     addUserMsg(text);
     messages.push({ role: 'user', content: text });
@@ -314,8 +315,9 @@ if (window.visualViewport) {
       addBotMsg("Oops — something went wrong on my end. Please try again in a moment.");
     }
 
-    sendBtn.disabled = false;
-    if (window.innerWidth > 600) input.focus();
+    sendBtn.style.opacity = '1';
+sendBtn.style.pointerEvents = 'auto';
+input.focus();
   }
 
   // ── Input handling ────────────────────────────────────────────────────────
