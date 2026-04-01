@@ -83,6 +83,13 @@
     .kai-msg.bot {
       background: #f0f7f6; color: #1a2e2c; border-bottom-left-radius: 4px; align-self: flex-start;
     }
+
+    .kai-msg.bot p { margin: 0 0 6px; }
+    .kai-msg.bot p:last-child { margin-bottom: 0; }
+    .kai-msg.bot ul, .kai-msg.bot ol { margin: 4px 0; padding-left: 16px; }
+    .kai-msg.bot li { margin-bottom: 2px; }
+    .kai-msg.bot code { background: #e0f0ee; padding: 1px 5px; border-radius: 4px; font-size: 12px; }
+
     .kai-msg.user {
       background: ${BRAND}; color: #fff; border-bottom-right-radius: 4px; align-self: flex-end;
     }
@@ -164,8 +171,8 @@
       <div id="kai-header">
         <div id="kai-avatar">K</div>
         <div id="kai-header-text">
-          <p id="kai-name">KAI</p>
-          <p id="kai-status">Online — Katwal Digital AI Assistant</p>
+          <p id="kai-name">KAi</p>
+          <p id="kai-status">Online — Katwal Digital</p>
         </div>
         <button id="kai-close" aria-label="Close chat">×</button>
       </div>
@@ -178,7 +185,7 @@
           <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
         </button>
       </div>
-      <div id="kai-footer">Powered by Katwal Digital</div>
+      <div id="kai-footer">Katwal Digital AI Assistant</div>
     </div>
   `);
 
@@ -243,6 +250,7 @@ if (window.visualViewport) {
     const el = document.createElement('div');
     el.className = 'kai-msg bot';
     el.textContent = text;
+    el.innerHTML = DOMPurify.sanitize(marked.parse(text));
     msgBox.appendChild(el);
     scrollBottom();
   }
@@ -270,10 +278,14 @@ if (window.visualViewport) {
   }
 
   function scrollBottom() {
-  requestAnimationFrame(() => {
+  msgBox.scrollTop = msgBox.scrollHeight;
+  }
+  
+  // Auto-scroll whenever messages are added or content changes
+  const scrollObserver = new MutationObserver(() => {
     msgBox.scrollTop = msgBox.scrollHeight;
   });
-}
+  scrollObserver.observe(msgBox, { childList: true, subtree: true });
 
   async function send() {
     const text = input.value.trim();
