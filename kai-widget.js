@@ -71,7 +71,6 @@
     #kai-messages {
       flex: 1; overflow-y: auto; padding: 16px 14px;
       display: flex; flex-direction: column; gap: 10px;
-      scroll-behavior: smooth;
     }
     #kai-messages::-webkit-scrollbar { width: 4px; }
     #kai-messages::-webkit-scrollbar-thumb { background: #d0e8e5; border-radius: 4px; }
@@ -249,7 +248,6 @@ if (window.visualViewport) {
   function addBotMsg(text) {
     const el = document.createElement('div');
     el.className = 'kai-msg bot';
-    el.textContent = text;
     el.innerHTML = DOMPurify.sanitize(marked.parse(text));
     msgBox.appendChild(el);
     scrollBottom();
