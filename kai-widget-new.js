@@ -137,7 +137,7 @@
     @media (max-width: 600px) {
       #kai-panel {
         top: 0; left: 0; right: 0; bottom: 0;
-        width: 100vw; height: 100dvh;
+        width: 100vw; height: var(--kai-vh, 100dvh);
         border-radius: 0; max-height: none;
         transform: none;
         transition: opacity 0.25s ease;
@@ -190,6 +190,17 @@
   const input    = document.getElementById('kai-input');
   const sendBtn  = document.getElementById('kai-send');
 
+// Resize panel when mobile keyboard appears/disappears
+if (window.visualViewport) {
+  const syncHeight = () => {
+    if (window.innerWidth <= 600) {
+      panel.style.height = window.visualViewport.height + 'px';
+    }
+  };
+  window.visualViewport.addEventListener('resize', syncHeight);
+  window.visualViewport.addEventListener('scroll', syncHeight);
+}
+  
   // ── Open / close ──────────────────────────────────────────────────────────
   let opened = false;
 
