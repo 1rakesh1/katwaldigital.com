@@ -274,15 +274,24 @@ if (window.visualViewport) {
   function removeTyping() {
     document.getElementById('kai-typing')?.remove();
   }
-
-  function scrollBottom() {
-  msgBox.scrollTop = msgBox.scrollHeight;
+  
+   function scrollBottom() {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        msgBox.scrollTop = msgBox.scrollHeight;
+      });
+    });
   }
   
-  // Auto-scroll whenever messages are added or content changes
   const scrollObserver = new MutationObserver(() => {
-    msgBox.scrollTop = msgBox.scrollHeight;
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        msgBox.scrollTop = msgBox.scrollHeight;
+      });
+    });
   });
+
+  
   scrollObserver.observe(msgBox, { childList: true, subtree: true });
 
   async function send() {
