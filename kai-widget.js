@@ -177,7 +177,7 @@
     <div id="kai-panel" role="dialog" aria-label="Chat with Kai">
       <div id="kai-header">
       
-       <div id="kai-avatar"><img src="/header-logo.svg" alt="Katwal Digital" /></div>
+       <div id="kai-avatar"><img src="/logo.svg" alt="Katwal Digital" /></div>
       
       <div id="kai-header-text">
           <p id="kai-name">Kai <span style="background:rgba(255,255,255,0.2);font-size:9px;padding:2px 7px;border-radius:20px;font-weight:500;letter-spacing:0.05em;vertical-align:middle;">AI</span> <span style="font-size:10px;font-weight:400;opacity:0.75;letter-spacing:0.03em;">Beta</span></p>
