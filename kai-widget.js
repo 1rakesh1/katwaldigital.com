@@ -143,7 +143,7 @@
     @media (max-width: 600px) {
       #kai-panel {
         top: 0; left: 0; right: 0; bottom: 0;
-        width: 100vw; height: var(--kai-vh, 100dvh);
+        width: 100vw;
         border-radius: 0; max-height: none;
         transform: none;
         transition: opacity 0.25s ease;
@@ -199,10 +199,12 @@
 // Resize panel when mobile keyboard appears/disappears
 if (window.visualViewport) {
   const syncHeight = () => {
-    if (window.innerWidth <= 600) {
-      panel.style.height = window.visualViewport.height + 'px';
-    }
-  };
+  if (window.innerWidth <= 600) {
+    panel.style.height = window.visualViewport.height + 'px';
+    panel.style.top = window.visualViewport.offsetTop + 'px';
+    setTimeout(scrollBottom, 100);
+  }
+};
   window.visualViewport.addEventListener('resize', syncHeight);
   window.visualViewport.addEventListener('scroll', syncHeight);
 }
@@ -313,7 +315,7 @@ if (window.visualViewport) {
     }
 
     sendBtn.disabled = false;
-    input.focus();
+    if (window.innerWidth > 600) input.focus();
   }
 
   // ── Input handling ────────────────────────────────────────────────────────
