@@ -69,7 +69,7 @@
     #kai-close:hover { opacity: 1; }
 
     #kai-messages {
-      flex: 1; overflow-y: auto; padding: 16px 14px;
+      flex: 1; min-height: 0; overflow-y: auto; padding: 16px 14px;
       display: flex; flex-direction: column; gap: 10px;
     }
     #kai-messages::-webkit-scrollbar { width: 4px; }
