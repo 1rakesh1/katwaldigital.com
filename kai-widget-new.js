@@ -64,7 +64,7 @@
     }
     #kai-close {
       background: none; border: none; color: #fff; cursor: pointer;
-      font-size: 20px; line-height: 1; padding: 4px; opacity: 0.8;
+      font-size: 28px; line-height: 1; padding: 8px; opacity: 0.8;
     }
     #kai-close:hover { opacity: 1; }
 
@@ -164,8 +164,8 @@
       <div id="kai-header">
         <div id="kai-avatar">K</div>
         <div id="kai-header-text">
-          <p id="kai-name">Kai</p>
-          <p id="kai-status">Online — Katwal Digital</p>
+          <p id="kai-name">KAI</p>
+          <p id="kai-status">Online — Katwal Digital AI Assistant</p>
         </div>
         <button id="kai-close" aria-label="Close chat">×</button>
       </div>
@@ -204,24 +204,29 @@ if (window.visualViewport) {
   // ── Open / close ──────────────────────────────────────────────────────────
   let opened = false;
 
+
   function openPanel() {
-    panel.classList.add('open');
-    if (window.innerWidth <= 600) btn.classList.add('kai-hidden');
-    input.focus();
-    // On mobile, scroll input into view when keyboard opens
-    setTimeout(() => input.scrollIntoView({ block: 'nearest' }), 300);
-    if (!opened) {
-      opened = true;
-      addNotice("🔒 Chats may be reviewed to help us improve.");
-      addBotMsg("Hi! I'm Kai 👋 I can tell you about Katwal Digital's services and pricing — or help you get started. What brings you here today?");
-    }
+  panel.classList.add('open');
+  if (window.innerWidth <= 600) {
+    btn.classList.add('kai-hidden');
+    document.body.style.overflow = 'hidden';
   }
+  input.focus();
+  setTimeout(() => input.scrollIntoView({ block: 'nearest' }), 300);
+  if (!opened) {
+    opened = true;
+    addNotice("Chats may be reviewed to help us improve.");
+    addBotMsg("Hi! I'm Kai, Katwal Digital AI assistant 👋 I can tell you about Katwal Digital's services — or help you get started. What brings you here today?");
+  }
+}
+  
 
   function closePanel() {
-    panel.classList.remove('open');
-    btn.classList.remove('kai-hidden');
-  }
-
+  panel.classList.remove('open');
+  btn.classList.remove('kai-hidden');
+  document.body.style.overflow = '';
+}
+  
   btn.addEventListener('click', () => panel.classList.contains('open') ? closePanel() : openPanel());
   closeBtn.addEventListener('click', closePanel);
 
@@ -265,8 +270,10 @@ if (window.visualViewport) {
   }
 
   function scrollBottom() {
+  requestAnimationFrame(() => {
     msgBox.scrollTop = msgBox.scrollHeight;
-  }
+  });
+}
 
   async function send() {
     const text = input.value.trim();
