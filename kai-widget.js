@@ -153,12 +153,6 @@
         right: 16px; bottom: 16px;
         transition: background 0.2s, transform 0.2s, opacity 0.2s;
       }
-
-      #kai-dot {
-      position: absolute; top: 2px; right: 2px;
-      width: 13px; height: 13px; border-radius: 50%;
-      background: #e53e3e; border: 2px solid #fff;
-      }
       
       #kai-btn.kai-hidden { opacity: 0; pointer-events: none; }
     }
@@ -188,7 +182,6 @@
   // ── HTML ──────────────────────────────────────────────────────────────────
   document.body.insertAdjacentHTML('beforeend', `
     <button id="kai-btn" aria-label="Chat with Kai">
-      <span id="kai-dot"></span>
       <span id="kai-sparkle">✦</span>
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path d="M20 2H4C2.9 2 2 2.9 2 4v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
@@ -250,8 +243,6 @@ if (window.visualViewport) {
     btn.classList.add('kai-hidden');
     document.body.style.overflow = 'hidden';
   }
-    const dot = document.getElementById('kai-dot');
-if (dot) dot.style.display = 'none';
     
   input.focus();
   setTimeout(() => input.scrollIntoView({ block: 'nearest' }), 300);
