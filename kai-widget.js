@@ -162,13 +162,34 @@
       
       #kai-btn.kai-hidden { opacity: 0; pointer-events: none; }
     }
+
+    #kai-sparkle {
+      position: absolute;
+      top: -4px; right: -4px;
+      width: 16px; height: 16px;
+      border-radius: 50%;
+     background: var(--gold-lt);
+      color: var(--white);
+      font-size: 14px;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+      animation: kai-sparkle-pulse 2.4s ease-in-out infinite;
+      pointer-events: none;
+      line-height: 1;
+    }
+    @keyframes kai-sparkle-pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      40%       { transform: scale(1.2); opacity: 0.85; }
+      70%       { transform: scale(0.95); opacity: 1; }
+    }
   `;
   document.head.appendChild(style);
 
   // ── HTML ──────────────────────────────────────────────────────────────────
   document.body.insertAdjacentHTML('beforeend', `
     <button id="kai-btn" aria-label="Chat with Kai">
-  <span id="kai-dot"></span>
+      <span id="kai-dot"></span>
+      <span id="kai-sparkle">✦</span>
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path d="M20 2H4C2.9 2 2 2.9 2 4v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
       </svg>
