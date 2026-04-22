@@ -433,7 +433,7 @@ nav#nav.scrolled { height: 62px; box-shadow: 0 2px 20px rgba(15,75,69,.25); }
 
 .gc-stage {
   position: absolute; inset: 0;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
   gap: 1.25rem; padding: 2rem 2.5rem;
   opacity: 0; transform: translateX(28px);
   transition: opacity .4s ease, transform .4s ease;
@@ -448,7 +448,8 @@ nav#nav.scrolled { height: 62px; box-shadow: 0 2px 20px rgba(15,75,69,.25); }
 
 /* Stage label — match .section-label */
 .gc-stage-label {
-  font-size: .7rem; font-weight: 600; letter-spacing: .16em;
+  font-family: var(--serif);
+  font-size: 1.1rem; font-weight: 600; letter-spacing: .16em;
   text-transform: uppercase; color: var(--gold); margin-bottom: 1rem;
   opacity: 0; transform: translateY(-6px);
   transition: opacity .5s ease .1s, transform .5s ease .1s;
@@ -512,7 +513,9 @@ nav#nav.scrolled { height: 62px; box-shadow: 0 2px 20px rgba(15,75,69,.25); }
 
 /* Stage 2 - Leads */
 
-.gc-notifs-wrap { display: flex; flex-direction: column; gap: .75rem; width: 100%; }
+.gc-notifs-wrap { display: flex; flex-direction: column; gap: .75rem; width: 100%; 
+height: fit-content;}
+
 .gc-notif {
   display: flex; align-items: center; gap: 12px;
   background: var(--white); border: 1px solid rgba(15,75,69,.1);
@@ -1066,7 +1069,7 @@ background-image: var(--grad-dark-img); padding: 4rem 6% 2rem; }
 
 
 
-    <div style="min-height:340px;position:relative;overflow:hidden;">
+    <div style="min-height:420px;position:relative;overflow:hidden;">
 
       <!-- Stage 0: More Visibility -->
       <div class="gc-stage active" id="gc-s0">
@@ -1159,7 +1162,7 @@ background-image: var(--grad-dark-img); padding: 4rem 6% 2rem; }
             <span class="gc-star">★</span>
             <span class="gc-star">★</span>
           </div>
-          <div class="gc-review-count">48 reviews on Google</div>
+          <div class="gc-review-count">548 reviews on Google</div>
           <div class="gc-review-card">
             <span class="gc-review-text">"Best service I've ever had. Highly recommend!"</span>
             <span class="gc-review-author">— Sarah M.</span>
@@ -1225,7 +1228,7 @@ background-image: var(--grad-dark-img); padding: 4rem 6% 2rem; }
     <!-- More Visibility -->
     <div class="service-card reveal reveal-scale d1">
       <div class="service-icon">
-        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
       </div>
       <h3>More Visibility</h3>
       <p class="service-desc">When someone searches for a business nearby, you need to show up — on Google Maps, in local results, and in AI-powered search. We handle the setup and ongoing optimisation so you're visible where it counts.</p>
@@ -1244,7 +1247,7 @@ background-image: var(--grad-dark-img); padding: 4rem 6% 2rem; }
       <div class="service-tag">Most Popular</div>
 
       <div class="service-icon">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3a14.5 14.5 0 0 1 0 18M3 12h18"/></svg>
+        <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
       </div>
 
       <h3>Business Website</h3>
@@ -1264,7 +1267,7 @@ background-image: var(--grad-dark-img); padding: 4rem 6% 2rem; }
     <!-- More Leads -->
     <div class="service-card reveal reveal-scale d3">
       <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M22 3H2l8 9.46V19l4 2v-7.54L22 3z"/></svg>
       </div>
       <h3>More Leads</h3>
       <p class="service-desc">
@@ -1283,7 +1286,7 @@ background-image: var(--grad-dark-img); padding: 4rem 6% 2rem; }
     <!-- Build Trust -->
     <div class="service-card reveal reveal-scale d1">
       <div class="service-icon">
-        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
       </div>
       <h3>Build Trust</h3>
       <p class="service-desc">
