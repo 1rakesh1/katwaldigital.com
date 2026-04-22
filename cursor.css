@@ -1,0 +1,68 @@
+/* ─────────────────────────────────────────────
+   cursor.css  —  Custom ring + dot cursor
+   Usage: <link rel="stylesheet" href="cursor.css">
+   ───────────────────────────────────────────── */
+
+:root {
+  --cursor-color:       #1A7A70;   /* ring / dot base colour   */
+  --cursor-color-hover: #2a9e91;   /* ring / dot hover colour  */
+  --cursor-ring-size:   48px;      /* default ring diameter    */
+  --cursor-ring-hover:  64px;      /* ring diameter on hover   */
+  --cursor-dot-size:    6px;       /* centre dot diameter      */
+}
+
+/* Hide the native cursor everywhere */
+*, html, body {
+  cursor: none !important;
+}
+
+/* ── Ring ── */
+#cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--cursor-ring-size);
+  height: var(--cursor-ring-size);
+  border: 2px solid var(--cursor-color);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition:
+    width       0.2s ease,
+    height      0.2s ease,
+    border-color 0.2s ease,
+    background  0.2s ease,
+    opacity     0.2s ease;
+  z-index: 99999;
+  mix-blend-mode: multiply;
+}
+
+/* ── Dot ── */
+#cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--cursor-dot-size);
+  height: var(--cursor-dot-size);
+  background: var(--cursor-color);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 100000;
+  transition:
+    background  0.2s ease,
+    transform   0.1s ease;
+}
+
+/* ── Hover states ── */
+body.cursor-hovering #cursor-ring {
+  width: var(--cursor-ring-hover);
+  height: var(--cursor-ring-hover);
+  border-color: var(--cursor-color-hover);
+  background: rgba(26, 122, 112, 0.07);
+}
+
+body.cursor-hovering #cursor-dot {
+  background: var(--cursor-color-hover);
+  transform: translate(-50%, -50%) scale(1.2);
+}
