@@ -485,7 +485,7 @@ nav#nav.scrolled { height: 62px; box-shadow: 0 2px 20px rgba(15,75,69,.25); }
   font-size: .7rem; font-weight: 700; color: white;
   background: var(--blue); border-radius: 5px; padding: 4px 8px; flex-shrink: 0;
 }
-.gc-result-title { font-size: .9rem; font-weight: 600; color: var(--ink); }
+.gc-result-title { font-size: .9rem; font-weight: 500; color: var(--ink); }
 .gc-result-sub { font-size: .78rem; color: var(--ink-muted); margin-top: 2px; }
 
 .gc-map-pin { margin-left: auto; flex-shrink: 0; animation: gc-pin 1.5s ease-in-out infinite; }
@@ -525,7 +525,7 @@ nav#nav.scrolled { height: 62px; box-shadow: 0 2px 20px rgba(15,75,69,.25); }
   width: 40px; height: 40px; border-radius: 10px; flex-shrink: 0;
   background: var(--blue-pale); display: flex; align-items: center; justify-content: center;
 }
-.gc-notif-title { font-size: .875rem; font-weight: 600; color: var(--ink); }
+.gc-notif-title { font-size: .875rem; font-weight: 500; color: var(--ink); }
 .gc-notif-sub { font-size: .78rem; color: var(--ink-muted); margin-top: 2px; }
 
 .gc-notif.show { opacity: 1; transform: translateX(0); }
@@ -548,7 +548,7 @@ nav#nav.scrolled { height: 62px; box-shadow: 0 2px 20px rgba(15,75,69,.25); }
   transition: opacity .4s ease, transform .4s ease;
 }
 .gc-review-text {
-  font-family: var(--serif); font-size: .875rem; font-style: italic;
+  font-family: var(--serif); font-size: 1rem; font-style: italic;
   color: var(--ink-mid); display: block; margin-bottom: .35rem;
 }
 .gc-review-author { font-size: .78rem; color: var(--ink-muted); }
@@ -565,6 +565,12 @@ nav#nav.scrolled { height: 62px; box-shadow: 0 2px 20px rgba(15,75,69,.25); }
 .gc-review-card.show { opacity: 1; transform: translateY(0); }
 
 
+@media (max-width: 768px) {
+  .hero-mockup-wrap { padding-left: 0; padding-right: 0; }
+  .gc-stage { padding: 1.25rem 1rem; }
+  .gc-notif { padding: .75rem 1rem; }
+  .gc-review-card { padding: .75rem 1rem; }
+}
 
 /* ── MARQUEE ── */
 .marquee-wrap {
@@ -1060,7 +1066,7 @@ background-image: var(--grad-dark-img); padding: 4rem 6% 2rem; }
 
 
 
-    <div style="height:340px;position:relative;overflow:hidden;">
+    <div style="min-height:340px;position:relative;overflow:hidden;">
 
       <!-- Stage 0: More Visibility -->
       <div class="gc-stage active" id="gc-s0">
