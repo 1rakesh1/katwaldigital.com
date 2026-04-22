@@ -46,7 +46,7 @@
     });
 
     /* Ring trails the pointer with a lerp for a smooth lag effect */
-    const LERP = 0.14; // 0 = no movement, 1 = instant — tweak to taste
+    const LERP = 0.1; // 0 = no movement, 1 = instant — tweak to taste
 
     function animateRing() {
       ringX += (mouseX - ringX) * LERP;
@@ -108,8 +108,12 @@
     observer.observe(document.body, { childList: true, subtree: true });
   }
 
+  function isTouchDevice() {
+  return window.matchMedia("(hover: none) and (pointer: coarse)").matches;
+}
   /* ── Bootstrap ── */
   function init() {
+    if (isTouchDevice()) return; // skip on touch devices
     injectCursorElements();
     initCursor();
     initHover();

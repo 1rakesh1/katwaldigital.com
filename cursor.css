@@ -16,6 +16,18 @@
   cursor: none !important;
 }
 
+@media (hover: none) and (pointer: coarse) {
+  #cursor-ring,
+  #cursor-dot {
+    display: none !important;
+  }
+
+  /* Restore the native cursor */
+  *, html, body {
+    cursor: auto !important;
+  }
+}
+
 /* ── Ring ── */
 #cursor-ring {
   position: fixed;
