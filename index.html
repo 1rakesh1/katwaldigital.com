@@ -4,14 +4,14 @@
   
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Katwal Digital | Web Design for Small Businesses</title>
-<meta name="description" content="Katwal Digital builds fast, professional websites for small businesses — custom design, SEO-ready and built to convert visitors into clients. Get a free quote.">
+<title>Katwal Digital | Digital Growth for Small Businesses</title>
+<meta name="description" content="Katwal Digital helps small businesses get found on Google, attract more visitors, generate leads, and build lasting trust online. Based in India, serving clients globally.">
 
 <!--These control how your page looks when shared on WhatsApp, LinkedIn, Facebook, etc. Also used by AI search crawlers to understand page identity. Without them, shares show no image, a broken title, or nothing at all.-->
 <meta property="og:type" content="website">
 <meta property="og:url"  content="https://katwaldigital.com/">
-<meta property="og:title" content="Katwal Digital | Web Design for Small Businesses">
-<meta property="og:description" content="Katwal Digital builds fast, professional websites for small businesses — custom design, SEO-ready and built to convert visitors into customers.">
+<meta property="og:title" content="Katwal Digital | Digital Growth for Small Businesses">
+<meta property="og:description" content="Katwal Digital helps small businesses get found on Google, attract more visitors, generate leads, and build lasting trust online. Based in India, serving clients globally.">
 <meta property="og:image"  content="https://katwaldigital.com/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -31,7 +31,7 @@
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "Katwal Digital",
-  "description": "Katwal Digital is a web design studio based in India, building websites for small businesses globally. Services include starter websites, business websites, landing pages, SEO and AI search optimisation, and monthly website care plans. We work with clients globally including the UK, Switzerland, Australia, and the US.",
+  "description": "Katwal Digital is a digital growth studio based in India. We help small businesses get found online, attract visitors, generate leads, and build trust — through local SEO, fast websites, AI chat, WhatsApp automation, reviews strategy, and monthly care plans. We work with clients globally.",
   "url": "https://katwaldigital.com",
   "logo": "https://katwaldigital.com/logo.svg",
   "email": "hello@katwaldigital.com",
@@ -46,22 +46,23 @@
     
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Web Design Services",
+    "name": "Digital Growth Services",
     "itemListElement": [
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Starter Website"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Business Website"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Landing Page Design"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "SEO and AI Search Optimisation"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Get Found — Local SEO & Google Business Profile Optimisation"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Get Visitors — Website Design & Development"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Get Leads — AI Chat & WhatsApp Automation"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Get Trusted — Reviews Strategy & Schema Markup"}},
       {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Website Care Plan"}}
     ]
   },
     
   "founder": {"@type": "Person", "name": "Rakesh Katwal"},
 
-  "knowsAbout": ["Web Design", "WordPress", "Elementor", "SEO", "HTML", "CSS", "AI Search Optimisation", "Schema Markup", "Landing Page Design", "Website Maintenance"],
+  "knowsAbout": ["Web Design", "WordPress", "Elementor", "SEO", "Local SEO", "Google Business Profile", "GEO", "AI Search Optimisation", "Schema Markup", "HTML", "CSS", "AI Chat Widgets", "WhatsApp Automation", "Lead Generation", "Reviews Strategy", "Online Reputation Management", "Website Maintenance", "Dental Clinic Marketing"],
 
    "sameAs": [
-  "https://www.upwork.com/freelancers/~012575956f3df65f4f"
+  "https://www.upwork.com/freelancers/~012575956f3df65f4f",
+   "https://www.instagram.com/katwaldigital"
   ]
 }
 </script>
@@ -166,6 +167,40 @@
 html { scroll-behavior: smooth; }
 body { font-family: var(--sans); background: var(--white); color: var(--ink-mid); line-height: 1.7; overflow-x: hidden; }
 
+
+/* ── CLASSES for SERVICES in Contact Us Form ── */
+.service-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .1rem;
+  margin-top: .2rem;
+  margin-left: .5rem;
+}
+
+.service-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: .2rem;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  color: var(--ink-muted);
+  cursor: pointer;
+  border-radius: var(--r-xl);
+  padding: .4rem .5rem;
+  white-space: nowrap;
+  transition: border-color .2s, background .2s, color .2s;
+}
+
+.service-pill input[type="checkbox"] {
+  accent-color: var(--blue);
+  cursor: pointer;
+}
+
+.service-pill:has(input:checked) {
+  color: var(--blue);
+  font-weight: 500;
+}
 
 /*new css for services section*/
 .service-card {
@@ -389,31 +424,151 @@ nav#nav.scrolled { height: 62px; box-shadow: 0 2px 20px rgba(15,75,69,.25); }
   color: var(--ink-muted); line-height: 1.4;
 }
 
-/* ── BROWSER MOCKUP ── */
-.hero-mockup-wrap { flex: 1; max-width: 520px; position: relative; z-index: 1; padding-bottom: 3.5rem; padding-top: 3.5rem; }
+/*Hero Mockup*/
+.hero-mockup-wrap { flex: 1; max-width: 560px; position: relative; z-index: 1; padding-bottom: 3.5rem; padding-top: 3.5rem; }
 .browser-mockup { position: relative; width: 100%; }
-.browser-frame { background: var(--white); border-radius: var(--r-lg); border: 1.5px solid rgba(15,75,69,.15); box-shadow: 0 24px 64px rgba(15,75,69,.12), 0 4px 16px rgba(15,75,69,.07); overflow: hidden; width: 100%; }
-.browser-bar { background: var(--surface2); padding: 10px 14px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid rgba(15,75,69,.1); }
-.browser-dots { display: flex; gap: 5px; }
-.browser-dot { width: 9px; height: 9px; border-radius: 50%; }
-.browser-dot.red { background: #FC8181; }
-.browser-dot.amber { background: #F6AD55; }
-.browser-dot.green { background: #68D391; }
-.browser-url { flex: 1; background: var(--white); border-radius: var(--r-xl); height: 22px; margin-left: 6px; display: flex; align-items: center; padding: 0 10px; border: 1px solid rgba(15,75,69,.1); }
-.browser-url span { font-size: 9px; color: var(--ink-muted); letter-spacing: .03em; }
-.browser-badge { position: absolute; bottom: -4px; right: -16px; 
-  background: var(--grad-teal); 
-  background-image: var(--grad-teal-img);
-  border-radius: var(--r-md); padding: 10px 14px; box-shadow: 0 8px 24px rgba(15,75,69,.25); display: flex; align-items: center; gap: 8px; }
-.badge-dot { width: 8px; height: 8px; border-radius: 50%; background: #F6AD55; flex-shrink: 0; transition: background .4s; }
-.badge-dot.live { background: #68D391; }
-#badge-label { font-size: 11px; font-weight: 500; color: #fff; line-height: 1.3; }
-#badge-sub { display: block; color: rgba(255,255,255,.9); font-weight: 400; font-size: 10px; margin-top: 1px; }
-@keyframes spin { to { transform: rotate(360deg); } }
+
+
+/* ── GROWTH STAGES ── */
+
+.gc-stage {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 1.25rem; padding: 2rem 2.5rem;
+  opacity: 0; transform: translateX(28px);
+  transition: opacity .4s ease, transform .4s ease;
+  pointer-events: none;
+}
+
+.gc-stage.active { opacity: 1; transform: translateX(0); pointer-events: all; }
+.gc-stage.exit {
+  opacity: 0; transform: translateX(-28px);
+  transition: opacity .25s ease, transform .25s ease;
+}
+
+/* Stage label — match .section-label */
+.gc-stage-label {
+  font-size: .7rem; font-weight: 600; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 1rem;
+  opacity: 0; transform: translateY(-6px);
+  transition: opacity .5s ease .1s, transform .5s ease .1s;
+}
+
+
+.gc-stage.active .gc-stage-label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stage 0 - Visibility */
+.gc-search-bar {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--surface); border: 1px solid rgba(15,75,69,.15);
+  border-radius: 20px; padding: 12px 18px;
+  width: 100%; font-size: .875rem; color: var(--ink-mid);
+}
+
+.gc-cursor { animation: gc-blink .75s infinite; color: var(--blue); }
+@keyframes gc-blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+.gc-result-card {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--white); border: 1.5px solid rgba(15,75,69,.12);
+  border-radius: var(--r-md); padding: 1rem 1.25rem; width: 100%;
+  opacity: 0; transform: translateY(10px);
+  transition: opacity .4s ease, transform .4s ease;
+  box-shadow: 0 4px 16px rgba(15,75,69,.08);
+}
+
+.gc-result-card.show { opacity: 1; transform: translateY(0); }
+.gc-rank-badge {
+  font-size: .7rem; font-weight: 700; color: white;
+  background: var(--blue); border-radius: 5px; padding: 4px 8px; flex-shrink: 0;
+}
+.gc-result-title { font-size: .9rem; font-weight: 600; color: var(--ink); }
+.gc-result-sub { font-size: .78rem; color: var(--ink-muted); margin-top: 2px; }
+
+.gc-map-pin { margin-left: auto; flex-shrink: 0; animation: gc-pin 1.5s ease-in-out infinite; }
+@keyframes gc-pin { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-3px)} }
+
+/* Stage 1 - Visitors */
+.gc-chart-bars { display: flex; align-items: flex-end; gap: 6px; height: 140px; width: 100%; }
+.gc-bar-lbl { font-size: .68rem; color: var(--ink-muted); }
+.gc-chart-num { font-family: var(--serif); font-size: 2rem; font-weight: 600; color: var(--blue); }
+.gc-chart-lbl { font-size: .75rem; color: var(--ink-muted); display: block; }
+
+.gc-chart-wrap { display: flex; flex-direction: column; max-width:100%; center; gap: 10px; width: 100%;  }
+
+.gc-bar-wrap { display: flex; flex-direction: column; align-items: center; gap: 4px; flex: 1; height: 100%; justify-content: flex-end; }
+.gc-bar {
+  width: 100%; border-radius: 4px 4px 0 0; height: 0;
+  background: var(--blue-pale);
+  transition: height .6s cubic-bezier(.22,1,.36,1);
+}
+.gc-bar.hi { background: var(--blue); }
+
+.gc-chart-meta { text-align: center; line-height: 1.3; }
+
+
+/* Stage 2 - Leads */
+
+.gc-notifs-wrap { display: flex; flex-direction: column; gap: .75rem; width: 100%; }
+.gc-notif {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--white); border: 1px solid rgba(15,75,69,.1);
+  border-radius: var(--r-md); padding: 1rem 1.25rem;
+  opacity: 0; transform: translateX(16px);
+  transition: opacity .35s ease, transform .35s ease;
+  box-shadow: 0 2px 8px rgba(15,75,69,.05);
+}
+.gc-notif-icon {
+  width: 40px; height: 40px; border-radius: 10px; flex-shrink: 0;
+  background: var(--blue-pale); display: flex; align-items: center; justify-content: center;
+}
+.gc-notif-title { font-size: .875rem; font-weight: 600; color: var(--ink); }
+.gc-notif-sub { font-size: .78rem; color: var(--ink-muted); margin-top: 2px; }
+
+.gc-notif.show { opacity: 1; transform: translateX(0); }
+.gc-notif-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--blue); margin-left: auto; flex-shrink: 0; }
+
+/* Stage 3 - Trust */
+
+.gc-trust-wrap { display: flex; flex-direction: column; align-items: center; gap: .75rem; }
+.gc-big-num {
+  font-family: var(--serif); font-size: 3.5rem; font-weight: 600; color: var(--blue);
+  line-height: 1; opacity: 0; transform: scale(.88);
+  transition: opacity .4s ease, transform .4s ease;
+}
+.gc-star { font-size: 1.6rem; color: #e8d5a3; transition: color .25s ease; }
+.gc-review-count { font-size: .78rem; color: var(--ink-muted); opacity: 0; transition: opacity .4s ease; }
+.gc-review-card {
+  background: var(--surface); border-radius: var(--r-md); padding: 1rem 1.5rem;
+  text-align: center; margin-top: .5rem; width: 100%;
+  opacity: 0; transform: translateY(8px);
+  transition: opacity .4s ease, transform .4s ease;
+}
+.gc-review-text {
+  font-family: var(--serif); font-size: .875rem; font-style: italic;
+  color: var(--ink-mid); display: block; margin-bottom: .35rem;
+}
+.gc-review-author { font-size: .78rem; color: var(--ink-muted); }
+
+
+
+.gc-big-num.show { opacity: 1; transform: scale(1); }
+.gc-stars-row { display: flex; gap: 3px; }
+
+.gc-star.lit { color: var(--gold); }
+
+.gc-review-count.show { opacity: 1; }
+
+.gc-review-card.show { opacity: 1; transform: translateY(0); }
+
+
 
 /* ── MARQUEE ── */
 .marquee-wrap {
-  background: var(--grad-teal);
+  background: var(--blue);
   padding: .8rem 0;
   overflow: hidden;
   white-space: nowrap;
@@ -566,6 +721,8 @@ background-image: var(--grad-teal-img); padding: 48px 6%; }
 .contact-form { display: flex; flex-direction: column; gap: 1.1rem; }
 
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
+
+
 .form-group { display: flex; flex-direction: column; gap: .4rem; }
 .form-group label { font-size: .7rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-muted); }
 .form-group input, .form-group select, .form-group textarea { background: var(--surface); border: 1.5px solid rgba(15,75,69,.12); border-radius: var(--r-md); padding: .8rem 1rem; font-family: var(--sans); font-size: .9rem; font-weight: 300; color: var(--ink); outline: none; transition: border-color .2s; width: 100%; }
@@ -872,7 +1029,7 @@ background-image: var(--grad-dark-img); padding: 4rem 6% 2rem; }
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="#contact" class="nav-cta">
-  Start a project
+  Free Consultation
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
   </a>
   <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -882,97 +1039,167 @@ background-image: var(--grad-dark-img); padding: 4rem 6% 2rem; }
   <a href="#services" onclick="closeMobile()">Services</a>
   <a href="#work" onclick="closeMobile()">Work</a>
   <a href="#about" onclick="closeMobile()">About</a>
-  <a href="#contact" onclick="closeMobile()">Start a project</a>
+  <a href="#contact" onclick="closeMobile()">Free Consultation</a>
 </div>
 
 <!-- HERO -->
 <section class="hero">
 
   <div class="hero-inner">
-    <div class="hero-eyebrow">Web Design &amp; Development for Small Businesses</div>
-    <h1>Websites that bring you<em> clients.</em></h1>
-     <p class="hero-sub">Fast websites for small businesses — built to look great, rank on Google and AI search, and turn visitors into customers.</p>
+    <div class="hero-eyebrow">Digital Growth Partner for Small Businesses</div>
+    <h1>More Visibility, More Leads,<em> More Business.</em></h1>
+     <p class="hero-sub">We help small businesses attract more customers online — with local SEO, a fast website that converts, and smart tools that turn visitors into enquiries and enquiries into paying customers.</p>
     <div class="hero-actions">
-      <a href="#contact" class="btn-primary">Start a project <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-      <a href="#work" class="btn-secondary">See our work</a>
+      <a href="#contact" class="btn-primary">Free Consultation <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="#work" class="btn-secondary">See Our Work</a>
     </div>
   </div>
 
-  <div class="hero-mockup-wrap">
-    <div class="browser-mockup">
-      <div class="browser-frame">
-        <div class="browser-bar">
-          <div class="browser-dots">
-            <div class="browser-dot red"></div>
-            <div class="browser-dot amber"></div>
-            <div class="browser-dot green"></div>
-          </div>
-          <div class="browser-url"><span id="url-text">yourwebsite.com</span></div>
+<div class="hero-mockup-wrap">
+  <div style="width:100%; padding:1.5rem 1rem;">
+
+
+
+    <div style="height:340px;position:relative;overflow:hidden;">
+
+      <!-- Stage 0: More Visibility -->
+      <div class="gc-stage active" id="gc-s0">
+         <div class="gc-stage-label">More Visibility</div>
+        <div class="gc-search-bar">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          <span id="gc-typed"></span><span class="gc-cursor">|</span>
         </div>
-        <div style="height:300px; padding:16px; position:relative; overflow:hidden;">
-          <div id="b-spinner" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
-            <div style="width:26px;height:26px;border:2px solid #C8E6E3;border-top-color:#1A7A70;border-radius:50%;animation:spin .8s linear infinite;"></div>
+        <div class="gc-result-card" id="gc-result-card">
+          <div class="gc-rank-badge">#1</div>
+          <div class="gc-result-info">
+            <div class="gc-result-title">Your Business</div>
+            <div class="gc-result-sub">yourbusiness.com · ⭐ 4.9</div>
           </div>
-          <div id="b-content" style="display:none;flex-direction:column;gap:10px;height:100%;">
-            <div id="b-nav" style="display:flex;align-items:center;gap:8px;padding-bottom:10px;border-bottom:1px solid #E4DDD2;opacity:0;transition:opacity .4s ease;">
-              <div style="width:44px;height:9px;background:#162120;border-radius:4px;"></div>
-              <div style="display:flex;gap:5px;flex:1;margin-left:6px;">
-                <div style="width:26px;height:6px;background:#E4DDD2;border-radius:3px;"></div>
-                <div style="width:26px;height:6px;background:#E4DDD2;border-radius:3px;"></div>
-                <div style="width:26px;height:6px;background:#E4DDD2;border-radius:3px;"></div>
-              </div>
-              <div style="width:42px;height:16px;background:#0F4B45;border-radius:10px;opacity:.8;"></div>
-            </div>
-            <div id="b-hero" style="background:#F0EBE0;border-radius:8px;padding:14px;opacity:0;transition:opacity .4s ease .15s;">
-              <div style="width:50px;height:5px;background:#C8E6E3;border-radius:3px;margin-bottom:8px;"></div>
-              <div id="b-typing" style="height:10px;background:#162120;border-radius:4px;margin-bottom:6px;width:0%;transition:width .8s ease;"></div>
-              <div id="b-typing2" style="height:10px;background:#0F4B45;border-radius:4px;margin-bottom:8px;width:0%;transition:width .8s ease .2s;"></div>
-              <div style="height:6px;background:#E4DDD2;border-radius:3px;margin-bottom:4px;"></div>
-              <div style="height:6px;background:#E4DDD2;border-radius:3px;width:65%;margin-bottom:10px;"></div>
-              <div style="width:58px;height:18px;background:#0F4B45;border-radius:10px;"></div>
-            </div>
-            <div id="b-cards" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;width:100%;min-width:0;">
-              <div class="b-card" style="background:#F0EBE0;border:1px solid #C8E6E3;border-radius:8px;padding:8px;opacity:0;transform:translateY(8px);transition:opacity .35s ease,transform .35s ease;"><div style="width:18px;height:18px;background:#C8E6E3;border-radius:5px;margin-bottom:6px;"></div><div style="height:5px;background:#E4DDD2;border-radius:3px;margin-bottom:4px;"></div><div style="height:5px;background:#E4DDD2;border-radius:3px;width:55%;"></div></div>
-              <div class="b-card" style="background:#F0EBE0;border:1px solid #C8E6E3;border-radius:8px;padding:8px;opacity:0;transform:translateY(8px);transition:opacity .35s ease .1s,transform .35s ease .1s;"><div style="width:18px;height:18px;background:#C8E6E3;border-radius:5px;margin-bottom:6px;"></div><div style="height:5px;background:#E4DDD2;border-radius:3px;margin-bottom:4px;"></div><div style="height:5px;background:#E4DDD2;border-radius:3px;width:55%;"></div></div>
-              <div class="b-card" style="background:#F0EBE0;border:1px solid #C8E6E3;border-radius:8px;padding:8px;opacity:0;transform:translateY(8px);transition:opacity .35s ease .2s,transform .35s ease .2s;"><div style="width:18px;height:18px;background:#C8E6E3;border-radius:5px;margin-bottom:6px;"></div><div style="height:5px;background:#E4DDD2;border-radius:3px;margin-bottom:4px;"></div><div style="height:5px;background:#E4DDD2;border-radius:3px;width:55%;"></div></div>
-            </div>
+          <div class="gc-map-pin">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue)" stroke="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
           </div>
         </div>
+       
       </div>
-      <div class="browser-badge">
-        <div class="badge-dot" id="badge-dot"></div>
-        <div><span id="badge-label" style="font-size:11px;font-weight:500;color:#fff;display:block;">Building your site</span><span id="badge-sub" style="font-size:10px;color:rgba(255,255,255,.9);font-weight:400;">starting up...</span></div>
+
+      <!-- Stage 1: More Visitors -->
+      <div class="gc-stage" id="gc-s1">
+        <div class="gc-stage-label">More Visitors</div>
+        <div class="gc-chart-wrap">
+          <div class="gc-chart-bars">
+            <div class="gc-bar-wrap"><div class="gc-bar"></div><span class="gc-bar-lbl">M</span></div>
+            <div class="gc-bar-wrap"><div class="gc-bar"></div><span class="gc-bar-lbl">T</span></div>
+            <div class="gc-bar-wrap"><div class="gc-bar"></div><span class="gc-bar-lbl">W</span></div>
+            <div class="gc-bar-wrap"><div class="gc-bar"></div><span class="gc-bar-lbl">T</span></div>
+            <div class="gc-bar-wrap"><div class="gc-bar"></div><span class="gc-bar-lbl">F</span></div>
+            <div class="gc-bar-wrap"><div class="gc-bar hi"></div><span class="gc-bar-lbl">S</span></div>
+            <div class="gc-bar-wrap"><div class="gc-bar hi"></div><span class="gc-bar-lbl">S</span></div>
+          </div>
+          <div class="gc-chart-meta">
+            <span class="gc-chart-num" id="gc-visitors">0</span>
+            <span class="gc-chart-lbl">visitors this week</span>
+          </div>
+        </div>
+    
       </div>
+
+      <!-- Stage 2: More Leads -->
+      <div class="gc-stage" id="gc-s2">
+        <div class="gc-stage-label">More Leads</div>
+        <div class="gc-notifs-wrap">
+          <div class="gc-notif" id="gc-n0">
+            <div class="gc-notif-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="gc-notif-title">New lead via website</div>
+              <div class="gc-notif-sub">Contact form · just now</div>
+            </div>
+            <div class="gc-notif-dot"></div>
+          </div>
+          <div class="gc-notif" id="gc-n1">
+            <div class="gc-notif-icon" style="background:var(--gold-pale);">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div>
+              <div class="gc-notif-title">WhatsApp enquiry</div>
+              <div class="gc-notif-sub">"I'd like to book an appointment"</div>
+            </div>
+            <div class="gc-notif-dot"></div>
+          </div>
+          <div class="gc-notif" id="gc-n2">
+            <div class="gc-notif-icon" style="background:#e8f5e9;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="gc-notif-title">Phone call from Google</div>
+              <div class="gc-notif-sub">New enquiry · 2 min ago</div>
+            </div>
+            <div class="gc-notif-dot"></div>
+          </div>
+        </div>
+        
+      </div>
+
+      <!-- Stage 3: Grow Trust -->
+      <div class="gc-stage" id="gc-s3">
+        <div class="gc-stage-label">Grow Trust</div>
+        <div class="gc-trust-wrap">
+          <div class="gc-big-num">4.9</div>
+          <div class="gc-stars-row">
+            <span class="gc-star">★</span>
+            <span class="gc-star">★</span>
+            <span class="gc-star">★</span>
+            <span class="gc-star">★</span>
+            <span class="gc-star">★</span>
+          </div>
+          <div class="gc-review-count">48 reviews on Google</div>
+          <div class="gc-review-card">
+            <span class="gc-review-text">"Best service I've ever had. Highly recommend!"</span>
+            <span class="gc-review-author">— Sarah M.</span>
+          </div>
+        </div>
+        
+      </div>
+
     </div>
+
   </div>
+
+</div>
+
 </section>
 
 <!-- MARQUEE -->
 <div class="marquee-wrap">
   <div class="marquee-track">
-    <span>Starter Websites </span>
+    <span>Local SEO</span>
     <span class="dot">●</span>
-    <span>Business Websites</span>
+    <span>GBP Optimization</span>
     <span class="dot">●</span>
-    <span>Landing Pages</span>
+    <span>More Visitors</span>
     <span class="dot">●</span>
-    <span>SEO &amp;AI Search Visibility</span>
+    <span>AI Search Visibility</span>
     <span class="dot">●</span>
-    <span>Website Care Plan</span>
+    <span>Fast Websites</span>
     <span class="dot">●</span>
-    <span>Custom HTML &amp; CSS</span>
-    <span class="dot">●</span>
-    <span>Starter Websites</span>
-    <span class="dot">●</span>
-    <span>Business Websites</span>
-    <span class="dot">●</span>
-    <span>Landing Pages</span>
-    <span class="dot">●</span>
-    <span>SEO &amp; AI Search Visibility</span>
-    <span class="dot">●</span>
-    <span>Website Care Plan</span>
+    <span>Mobile-First</span>
     <span class="dot">●</span>
     <span>Custom HTML &amp; CSS</span>
+    <span class="dot">●</span>
+    <span>More Leads</span>
+    <span class="dot">●</span>
+    <span>AI Chat</span>
+    <span class="dot">●</span>
+    <span>WhatsApp Automation</span>
+    <span class="dot">●</span>
+    <span>GBP Optimization</span>
+    <span class="dot">●</span>
+    <span>Reviews Strategy</span>
+    <span class="dot">●</span>
+    <span>Schema Markup</span>
+    <span class="dot">●</span>
+    <span>More Business</span>
     <span class="dot">●</span>
   </div>
 </div>
@@ -981,26 +1208,26 @@ background-image: var(--grad-dark-img); padding: 4rem 6% 2rem; }
 <section id="services">
   <div class="reveal">
     <div class="section-label">Services</div>
-    <h2>Everything you need to get online <em>— and keep growing.</em></h2>
+    <h2>Everything your business needs to <em>— attract and convert customers.</em></h2>
     <p class="section-sub">
-      From your first website to ongoing SEO and care — everything built to work hard for your business.
+      We don't just build websites. We build the complete digital system that gets you found, brings in the right visitors, turns them into enquiries, and builds the trust that makes them choose you.
     </p>
   </div>
 
   <div class="services-grid">
 
-    <!-- Starter -->
+    <!-- More Visibility -->
     <div class="service-card reveal reveal-scale d1">
       <div class="service-icon">
         <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg>
       </div>
-      <h3>Starter Website</h3>
-      <p class="service-desc">A clean, professional website to get your business online and looking credible from day one.</p>
+      <h3>More Visibility</h3>
+      <p class="service-desc">When someone searches for a business nearby, you need to show up — on Google Maps, in local results, and in AI-powered search. We handle the setup and ongoing optimisation so you're visible where it counts.</p>
 
       <ul class="service-features">
-        <li>3–5 pages</li>
-        <li>Mobile responsive</li>
-        <li>Contact form</li>
+        <li>Google Business Profile management</li>
+        <li>Local SEO optimisation</li>
+        <li>AI search (GEO) optimisation</li>
       </ul>
 
       <a href="#contact" class="service-link">Get started <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
@@ -1020,48 +1247,47 @@ background-image: var(--grad-dark-img); padding: 4rem 6% 2rem; }
       </p>
 
       <ul class="service-features">
-        <li>5–10 pages</li>
-        <li>Custom design</li>
+        <li>Custom or WordPress website</li>
+        <li>Mobile-first, fast-loading</li>
         <li>SEO-ready structure</li>
       </ul>
 
       <a href="#contact" class="service-link">Get started <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
 
-    <!-- Landing Page -->
+    <!-- More Leads -->
     <div class="service-card reveal reveal-scale d3">
       <div class="service-icon">
         <svg viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
       </div>
-      <h3>Landing Page</h3>
+      <h3>More Leads</h3>
       <p class="service-desc">
-        High-converting pages built for ads, campaigns, and focused lead generation.
+        Turn website visitors into enquiries — even outside clinic hours. We set up an AI chat widget, WhatsApp automation, and contact flows that capture leads and keep potential patients moving toward a booking.
       </p>
 
       <ul class="service-features">
-        <li>Conversion-focused design</li>
-        <li>Fast loading</li>
-        <li>Mobile optimised</li>
+        <li>AI Chat Widget</li>
+        <li>WhatsApp Automation</li>
+        <li>Contact funnel setup</li>
       </ul>
 
       <a href="#contact" class="service-link">Get started <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
 
-    <!-- SEO -->
+    <!-- Build Trust -->
     <div class="service-card reveal reveal-scale d1">
       <div class="service-icon">
         <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
       </div>
-      <h3>SEO &amp; AI Search Visibility</h3>
+      <h3>Build Trust</h3>
       <p class="service-desc">
-        Get found on Google and AI search tools. We handle the technical side — page speed, on-page SEO, and structured data — so the right people find you.
+        Trust is what converts a visitor into a customer. We help you build a credible online presence — with a reviews strategy that generates more 5-star feedback, schema markup that signals authority to Google, and a polished image that instils confidence before they even call.
       </p>
 
       <ul class="service-features">
-        <li>On-page SEO</li>
-        <li>AI search optimisation</li>
-        <li>Technical optimisation</li>
-        <li>Schema & structured data</li>
+        <li>Reviews strategy</li>
+        <li>Schema & structured markup</li>
+        <li>Online reputation management</li>
       </ul>
 
       <a href="#contact" class="service-link">Get started <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
@@ -1074,7 +1300,7 @@ background-image: var(--grad-dark-img); padding: 4rem 6% 2rem; }
       </div>
       <h3>Website Care Plan</h3>
       <p class="service-desc">
-        We look after your site so you don't have to — updates, backups, security, and support, all handled for you every month.
+        Your digital presence keeps working — even when you're with your customers. We handle updates, backups, security, and support every month, so your website and tools stay fast, safe, and always on.
       </p>
 
       <ul class="service-features">
@@ -1094,8 +1320,8 @@ background-image: var(--grad-dark-img); padding: 4rem 6% 2rem; }
 <section id="work">
   <div class="reveal">
     <div class="section-label">Our work</div>
-    <h2>Every website gets our<br><em>full attention.</em></h2>
-    <p class="section-sub">From a Swiss healthcare consulting firm to clients across the globe.</p>
+    <h2>Every client gets our<br><em>full attention.</em></h2>
+    <p class="section-sub">Real businesses. Real results. From Zurich to Perth, small businesses trust us to grow their online presence.</p>
   </div>
   <div class="work-grid">
     <div class="project-card reveal d1">
@@ -1111,6 +1337,23 @@ background-image: var(--grad-dark-img); padding: 4rem 6% 2rem; }
         <a href="https://valoreye.com/en/" target="_blank" rel="noopener" class="project-link">View live site <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
       </div>
     </div>
+
+    <div class="project-card reveal d1">
+      <div class="project-thumb valoreye">
+        <div class="project-thumb-overlay"><span><a href="https://puresmileclinic.katwaldigital.com/" target="_blank" rel="noopener" class="project-hover-link"> View demo site <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></span></div>
+        <div class="project-thumb-content"><div class="project-thumb-title">Pure Smile Clinic</div><div class="project-thumb-sub">Dental Clinic · Demo Website</div></div>
+      </div>
+      <div class="project-body">
+        <div class="project-tags"><span class="project-tag">Business Website</span><span class="project-tag gold">AI Chatbot</span>
+        </div>
+
+        <h3>Pure Smile Clinic</h3>
+        <p class="project-location">Dental Clinic</p>
+        <p>A demo website built to show dental clinics exactly what their online presence could look like — fast, mobile-first, and designed to attract new patients. Includes a live AI chatbot you can try yourself.</p>
+        <a href="https://puresmileclinic.katwaldigital.com/" target="_blank" rel="noopener" class="project-link">View demo site <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+      </div>
+    </div>
+
     <div class="project-card reveal d2">
       <div class="project-thumb placeholder"><div class="project-thumb-content"><div class="project-thumb-title">Your business here?</div></div></div>
       <div class="project-body">
@@ -1145,7 +1388,7 @@ background-image: var(--grad-dark-img); padding: 4rem 6% 2rem; }
   <div class="reveal" style="text-align:center;max-width:560px;margin:0 auto 4rem;">
     <div class="section-label" style="justify-content:center;">How we work</div>
     <h2>Simple, clear,<br><em>no surprises.</em></h2>
-    <p class="section-sub" style="margin:0 auto;">Here's how we take a small business website from first conversation to live — and keep it growing after launch.</p>
+    <p class="section-sub" style="margin:0 auto;">Here's how we work — from first conversation to launch, and the ongoing partnership that turns your website into a growth engine.</p>
   </div>
   <div class="process-grid">
     <div class="process-step reveal d1"><div class="step-bubble"><div class="step-num">01</div></div><h4>Discovery call</h4><p>We learn about your business, your goals, and what you need from your website — no obligation, just a real conversation.</p></div>
@@ -1161,20 +1404,20 @@ background-image: var(--grad-dark-img); padding: 4rem 6% 2rem; }
     <div class="about-copy reveal">
       <div class="section-label">Who we are</div>
       <h2>A studio that puts<br><em>your business first.</em></h2>
-      <p>Katwal Digital is a web design studio based in India, serving small businesses globally. Every client works directly with us — the same people on every call, every email, and every decision, from start to finish.</p>
+      <p>Katwal Digital is a digital growth studio based in India, working with small businesses globally. Every client works directly with us — the same people on every call, every email, and every decision, from start to finish.</p>
 
       <p>We've built websites for businesses ranging from Swiss healthcare consulting firms to local service providers across the UK, Australia, and the US — and what we've found is that every one of them deserves the same quality of work. A great website shouldn't be reserved for big companies with big budgets.</p>
-      <blockquote><p>"Every business deserves a website worth visiting — and we build exactly that."</p></blockquote>
+      <blockquote><p>"Growth-focused on every engagement, without exception"</p></blockquote>
       <p>Based in India, we work with clients across time zones over email, WhatsApp, and video calls. Care plan clients get dedicated support with a response time within one business day — because reliable communication is part of the service.</p>
     </div>
     <div class="about-cards reveal d2">
-      <div class="about-card"><div class="num">100<span>%</span></div><div class="lbl">Mobile-responsive on every project, without exception</div></div>
+      <div class="about-card"><div class="num">100<span>%</span></div><div class="lbl">Every client gets our full attention, on every project</div></div>
             
       <div class="about-card"><div class="num">0<span>$</span></div><div class="lbl">No Hidden fees. Fixed price, always.</div></div>
       <div class="about-highlight">
-        <p>From first-time website owners to businesses ready to grow — if you need <strong>a website that works hard</strong> for you, we'd love to build it.</p>
+        <p>Whether you're starting from scratch or ready to scale — if you want <strong>a digital presence that consistently brings in clients</strong>, we'd love to make that happen.</p>
         <a href="#contact" class="about-cta-btn">
-          Start a project
+          Free Consultation
           <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
@@ -1264,8 +1507,8 @@ background-image: var(--grad-dark-img); padding: 4rem 6% 2rem; }
 <!-- CONTACT -->
 <section id="contact">
   <div class="reveal">
-    <div class="section-label">Get in touch</div>
-    <h2>Let's talk about<br>your <em>project.</em></h2>
+    <div class="section-label">Free Consultation</div>
+    <h2>Let's talk about<br>your <em>growth.</em></h2>
     <p class="section-sub">Tell us a little about what you need. We'll get back to you within 24 hours — no sales pitch, just an honest conversation.</p>
   </div>
   <div class="contact-inner">
@@ -1286,19 +1529,20 @@ background-image: var(--grad-dark-img); padding: 4rem 6% 2rem; }
       <!-- Honeypot spam protection (recommended) -->
       <input type="checkbox" name="botcheck" style="display:none;">
       
+      
       <div class="form-group">
-        <label>What do you need?</label>
-        <select name="service">
-          <option value="" disabled selected>Select a service…</option>
-          <option>Starter Website</option>
-          <option>Business Website</option>
-          <option>Landing Page</option>
-          <option>SEO &amp; AI Search optimisation</option>
-          <option>Website Care Plan</option>
-          <option>Not sure yet — let's talk</option>
-        </select>
+        <label>What's your goal?</label>
+        <div class="service-pills">
+          <label class="service-pill"><input type="checkbox" name="service" value="more-visibility"> More Visibility</label>
+          <label class="service-pill"><input type="checkbox" name="service" value="more-leads"> More Leads</label>
+          <label class="service-pill"><input type="checkbox" name="service" value="build-trust"> Build Trust</label>
+          <label class="service-pill"><input type="checkbox" name="service" value="business-website"> Business Website</label>
+          <label class="service-pill"><input type="checkbox" name="service" value="care-plan"> Website Care Plan</label>
+          <label class="service-pill"><input type="checkbox" name="service" value="not-sure"> Not sure yet</label>
+        </div>
       </div>
-      <div class="form-group"><label>Tell us about your project</label><textarea name="message" placeholder="What does your business do? What matters most to you in a new site?"></textarea></div>
+
+      <div class="form-group"><label>Tell us about your business</label><textarea name="message" placeholder="Tell us a bit about your business and what you're hoping to achieve."></textarea></div>
       <button type="submit" class="btn-submit">Send message <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
     </form>
     <div class="form-success" id="form-success">
@@ -1328,17 +1572,17 @@ background-image: var(--grad-dark-img); padding: 4rem 6% 2rem; }
       <div class="footer-brand">
         <img src="logo.svg" alt="Katwal Digital" width="120" height="32" loading="lazy" style="height:32px;width:auto;">
         <span class="footer-logo-text">Katwal <span>Digital</span></span></div>
-        <p class="footer-entity">Katwal Digital is a web design studio based in India, specialising in websites for small businesses. Services include starter websites, business websites, landing pages, SEO and AI search optimisation, and monthly website care plans. We work with clients globally including the UK, Switzerland, Australia, and the US.</p>
+        <p class="footer-entity">Katwal Digital is a digital growth studio based in India, helping small businesses get more clients online. Services include local SEO, GBP Otimization, website design, AI Chatbot, reviews strategy, and monthly care plans. We work with clients globally.</p>
 
       <div class="footer-contact-line"><a href="/cdn-cgi/l/email-protection#e58d8089898aa58e8491928489818c828c918489cb868a88"><span class="__cf_email__" data-cfemail="274f424b4b48674c465350464b434e404e53464b0944484a">[email&#160;protected]</span></a></div>
     </div>
     <div>
       <div class="footer-col-title">Services</div>
       <div class="footer-col-nav">
-        <a href="#services">Starter Website</a>
+        <a href="#services">More Visibility</a>
         <a href="#services">Business Website</a>
-        <a href="#services">Landing Page</a>
-        <a href="#services">SEO & AI Search optimisation</a>
+        <a href="#services">More Leads</a>
+        <a href="#services">Build Trust</a>
         <a href="#services">Website Care Plan</a>
       </div>
     </div>
@@ -1382,11 +1626,13 @@ background-image: var(--grad-dark-img); padding: 4rem 6% 2rem; }
 
     nav.classList.toggle('scrolled', scrollTop > 50);
 
-    // Smart header — hide on scroll down, show on scroll up
-    if (scrollTop > lastScrollY && scrollTop > 80) {
-      nav.classList.add('nav-hidden');
-    } else {
-      nav.classList.remove('nav-hidden');
+   // Smart header — hide on scroll down, show on scroll up
+    if (window.innerWidth <= 768) {
+      if (scrollTop > lastScrollY && scrollTop > 80) {
+        nav.classList.add('nav-hidden');
+      } else {
+        nav.classList.remove('nav-hidden');
+      }
     }
 
     // Sync mobile menu top with current nav height
@@ -1422,62 +1668,19 @@ background-image: var(--grad-dark-img); padding: 4rem 6% 2rem; }
   burger.classList.remove('open');
   }
 
+   document.addEventListener('click', (e) => {
+    if (!mobileMenu.contains(e.target) && !burger.contains(e.target)) {
+      mobileMenu.classList.remove('open');
+      burger.classList.remove('open');
+    }
+  });
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
   }, { threshold: 0.1 });
   document.querySelectorAll('.reveal, .reveal-scale').forEach(el => observer.observe(el));
 
-  // Build animation
-  function resetMock() {
-    document.getElementById('b-spinner').style.display = 'flex';
-    document.getElementById('b-content').style.display = 'none';
-    document.getElementById('b-nav').style.opacity = '0';
-    document.getElementById('b-hero').style.opacity = '0';
-    document.getElementById('b-typing').style.width = '0%';
-    document.getElementById('b-typing2').style.width = '0%';
-    document.querySelectorAll('.b-card').forEach(c => { c.style.opacity = '0'; c.style.transform = 'translateY(8px)'; });
-    document.getElementById('badge-dot').classList.remove('live');
-    document.getElementById('badge-label').textContent = 'Building your site';
-    document.getElementById('badge-sub').textContent = 'starting up...';
-    document.getElementById('url-text').textContent = 'yourwebsite.com';
-  }
-  function setBadge(label, sub, live) {
-    document.getElementById('badge-label').textContent = label;
-    document.getElementById('badge-sub').textContent = sub;
-    document.getElementById('badge-dot').classList.toggle('live', live);
-  }
-  function typeUrl(url) {
-    const el = document.getElementById('url-text');
-    el.textContent = '';
-    let i = 0;
-    const t = setInterval(() => { el.textContent += url[i++]; if (i >= url.length) clearInterval(t); }, 55);
-  }
-  function runBuild() {
-    resetMock();
-    setTimeout(() => { typeUrl('yourwebsite.com'); setBadge('Preparing workspace', 'setting things up...', false); }, 600);
-    setTimeout(() => { setBadge('Adding navigation', 'header & menu...', false); }, 2200);
-    setTimeout(() => {
-      document.getElementById('b-spinner').style.display = 'none';
-      document.getElementById('b-content').style.display = 'flex';
-      requestAnimationFrame(() => requestAnimationFrame(() => { document.getElementById('b-nav').style.opacity = '1'; }));
-    }, 2800);
-    setTimeout(() => { setBadge('Writing hero section', 'headline & copy...', false); }, 4400);
-    setTimeout(() => {
-      document.getElementById('b-hero').style.opacity = '1';
-      setTimeout(() => { document.getElementById('b-typing').style.width = '80%'; document.getElementById('b-typing2').style.width = '55%'; }, 200);
-    }, 5000);
-    setTimeout(() => { setBadge('Building content blocks', 'almost there...', false); }, 6900);
-    setTimeout(() => { document.querySelectorAll('.b-card').forEach(c => { c.style.opacity = '1'; c.style.transform = 'translateY(0)'; }); }, 7500);
-    setTimeout(() => { setBadge('Site is live!', 'yourwebsite.com', true); }, 9500);
-    setTimeout(runBuild, 13500);
-  }
-  let buildStarted = false;
-  const mockupObserver = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting && !buildStarted) { buildStarted = true; runBuild(); mockupObserver.disconnect(); } });
-  }, { threshold: 0.2 });
-  const mockupEl = document.querySelector('.browser-mockup');
-  if (mockupEl) mockupObserver.observe(mockupEl);
-
+  
   // Form submit — show success state
   /*function handleSubmit(e) {
     e.preventDefault();
@@ -1540,11 +1743,105 @@ document.querySelectorAll('.faq-question').forEach(btn => {
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// ── GROWTH STAGES ──
+const gcData = [
+  { label: 'More Visibility', sub: 'Getting found on Google'            },
+  { label: 'More Visitors',   sub: 'Growing your audience online'       },
+  { label: 'More Leads',      sub: 'Converting visitors into enquiries' },
+  { label: 'Grow Trust',      sub: 'Building your online reputation'    },
+];
+const BAR_HEIGHTS = [45, 62, 38, 70, 55, 88, 95];
+let gcIdx = 0;
+
+function gcResetStage(idx) {
+  if (idx === 0) {
+    const t = document.getElementById('gc-typed');
+    if (t) t.textContent = '';
+    document.getElementById('gc-result-card')?.classList.remove('show');
+  }
+  if (idx === 1) {
+    document.querySelectorAll('#gc-s1 .gc-bar').forEach(b => b.style.height = '0');
+    const v = document.getElementById('gc-visitors');
+    if (v) v.textContent = '0';
+  }
+  if (idx === 2) {
+    document.querySelectorAll('#gc-s2 .gc-notif').forEach(n => n.classList.remove('show'));
+  }
+  if (idx === 3) {
+    document.querySelector('.gc-big-num')?.classList.remove('show');
+    document.querySelectorAll('.gc-star').forEach(s => s.classList.remove('lit'));
+    document.querySelector('.gc-review-count')?.classList.remove('show');
+    document.querySelector('.gc-review-card')?.classList.remove('show');
+  }
+}
+
+function gcAnimate(idx) {
+  if (idx === 0) {
+    const words = 'dentist near me';
+    const el = document.getElementById('gc-typed');
+    if (!el) return;
+    let i = 0;
+    const t = setInterval(() => { el.textContent += words[i++]; if (i >= words.length) clearInterval(t); }, 75);
+    setTimeout(() => document.getElementById('gc-result-card')?.classList.add('show'), 1300);
+  }
+  if (idx === 1) {
+    document.querySelectorAll('#gc-s1 .gc-bar').forEach((b, i) => {
+      setTimeout(() => { b.style.height = BAR_HEIGHTS[i] + '%'; }, 100 + i * 100);
+    });
+    setTimeout(() => {
+      let n = 0; const target = 247;
+      const el = document.getElementById('gc-visitors');
+      const t = setInterval(() => {
+        n = Math.min(n + 8, target);
+        if (el) el.textContent = n;
+        if (n >= target) clearInterval(t);
+      }, 25);
+    }, 350);
+  }
+  if (idx === 2) {
+    document.querySelectorAll('#gc-s2 .gc-notif').forEach((n, i) => {
+      setTimeout(() => n.classList.add('show'), 150 + i * 420);
+    });
+  }
+  if (idx === 3) {
+    setTimeout(() => document.querySelector('.gc-big-num')?.classList.add('show'), 200);
+    document.querySelectorAll('.gc-star').forEach((s, i) => {
+      setTimeout(() => s.classList.add('lit'), 500 + i * 180);
+    });
+    setTimeout(() => document.querySelector('.gc-review-count')?.classList.add('show'), 1500);
+    setTimeout(() => document.querySelector('.gc-review-card')?.classList.add('show'), 1900);
+  }
+}
+
+function gcGo(nextIdx) {
+  gcResetStage(nextIdx);
+  const prevEl = document.getElementById('gc-s' + gcIdx);
+  const nextEl = document.getElementById('gc-s' + nextIdx);
+  prevEl.classList.add('exit');
+  prevEl.classList.remove('active');
+  setTimeout(() => prevEl.classList.remove('exit'), 300);
+  setTimeout(() => { gcIdx = nextIdx; nextEl.classList.add('active'); gcAnimate(nextIdx); }, 260);
+}
+
+let gcStarted = false;
+const gcObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting && !gcStarted) {
+      gcStarted = true;
+      gcAnimate(0);
+      setInterval(() => { gcGo((gcIdx + 1) % 4); }, 4200);
+      gcObserver.disconnect();
+    }
+  });
+}, { threshold: 0.2 });
+const gcEl = document.querySelector('.hero-mockup-wrap');
+if (gcEl) gcObserver.observe(gcEl);
+
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
-<script src="/kai-widget.js?v=15"></script>
+<script src="/kai-widget.js?v=16"></script>
   
 </body>
 </html>

@@ -22,12 +22,12 @@
     #kai-btn {
       position: fixed; bottom: 24px; right: 24px; z-index: 9998;
       width: 56px; height: 56px; border-radius: 50%;
-      background: ${BRAND}; border: none; cursor: pointer;
+      background: linear-gradient(135deg, #23918A 0%, #0F4B45 100%); border: none; cursor: pointer;
       box-shadow: 0 4px 16px rgba(26,122,112,0.35);
       display: flex; align-items: center; justify-content: center;
       transition: background 0.2s, transform 0.2s;
     }
-    #kai-btn:hover { background: ${BRAND_D}; transform: scale(1.06); }
+    #kai-btn:hover { background: linear-gradient(135deg, #2aa89e 0%, #145f57 100%); transform: scale(1.06); }
     #kai-btn svg { width: 26px; height: 26px; fill: #fff; }
 
     #kai-panel {
