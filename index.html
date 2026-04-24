@@ -1023,7 +1023,17 @@ background-image: var(--grad-dark-img); padding: 4rem 6% 2rem; }
 
 .faq-answer-inner a:hover { color: var(--teal-lt); }
 
+/* ── DESKTOP-SPECIFIC HEADING BREAK ── */
+.br-desktop { display: inline; }
+
+@media (min-width: 580px) {
+  .br-desktop {
+    display: block;
+  }
+}
+
 </style>
+
 </head>
 
 <body>
@@ -1219,7 +1229,7 @@ background-image: var(--grad-dark-img); padding: 4rem 6% 2rem; }
 <section id="services">
   <div class="reveal">
     <div class="section-label">Services</div>
-    <h2>Everything your business needs<br><em>— to attract and convert customers.</em></h2>
+    <h2>Everything your business needs <span class="br-desktop"><em>— to attract and convert customers.</em></span></h2>
     <p class="section-sub">
       We don't just build websites. We build the complete digital system that gets you found, brings in the right visitors, turns them into enquiries, and builds the trust that makes them choose you.
     </p>
@@ -1336,10 +1346,15 @@ background-image: var(--grad-dark-img); padding: 4rem 6% 2rem; }
   </div>
   <div class="work-grid">
     <div class="project-card reveal d1">
-      <div class="project-thumb valoreye">
-        <div class="project-thumb-overlay"><span><a href="https://valoreye.com/en/" target="_blank" rel="noopener" class="project-hover-link"> View live site <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a></span></div>
-        <div class="project-thumb-content"><div class="project-thumb-title">Valoreye</div><div class="project-thumb-sub">Switzerland · Healthcare Consulting</div></div>
-      </div>
+        <div class="project-thumb valoreye">
+            <div class="project-thumb-overlay">
+            <span> <a href="https://valoreye.com/en/" target="_blank" rel="noopener" class="project-hover-link">View live site <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+            </span>
+          </div>
+          
+          <div class="project-thumb-content"><div class="project-thumb-title">Valoreye</div><div class="project-thumb-sub">Switzerland · Healthcare Consulting</div></div>
+        </div>
+      
       <div class="project-body">
         <div class="project-tags"><span class="project-tag">Business Website</span><span class="project-tag">Multilingual</span><span class="project-tag gold">Care Plan</span></div>
         <h3>Valoreye GmbH</h3>

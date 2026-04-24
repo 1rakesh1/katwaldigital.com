@@ -47,15 +47,21 @@
 
     /* Ring trails the pointer with a lerp for a smooth lag effect */
     const LERP = 0.1; // 0 = no movement, 1 = instant — tweak to taste
+    const BASE_MS = 1000 / 60;
+    let lastTime = null;
 
-    function animateRing() {
-      ringX += (mouseX - ringX) * LERP;
-      ringY += (mouseY - ringY) * LERP;
+    function animateRing(timestamp) {
+      if (lastTime === null) lastTime = timestamp;
+      const delta = Math.min((timestamp - lastTime) / BASE_MS, 4);
+      lastTime = timestamp;
+      const factor = 1 - Math.pow(1 - LERP, delta);
+      ringX += (mouseX - ringX) * factor;
+      ringY += (mouseY - ringY) * factor;
       ring.style.left = ringX + "px";
       ring.style.top  = ringY + "px";
       requestAnimationFrame(animateRing);
     }
-    animateRing();
+    requestAnimationFrame(animateRing);
 
     /* Hide cursor when it leaves the window */
     document.addEventListener("mouseleave", () => {

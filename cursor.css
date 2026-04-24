@@ -76,5 +76,5 @@ body.cursor-hovering #cursor-ring {
 
 body.cursor-hovering #cursor-dot {
   background: var(--cursor-color-hover);
-  transform: translate(-50%, -50%) scale(1.2);
+  transform: translate(-50%, -50%) scale(1.4);
 }
