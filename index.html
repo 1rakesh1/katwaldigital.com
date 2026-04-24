@@ -391,7 +391,7 @@ nav#nav.scrolled { height: 62px; box-shadow: 0 2px 20px rgba(15,75,69,.25); }
 
 .hero-inner { flex: 1; max-width: 560px; position: relative; z-index: 1; }
 
-.hero-eyebrow { display: inline-flex; align-items: center; gap: .75rem; font-size: .72rem; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.75rem; }
+.hero-eyebrow { display: inline-flex; align-items: center; gap: .75rem; font-size: .72rem; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); padding-top: 1rem; margin-bottom: 1.75rem; }
 .hero-eyebrow::before { content: ''; display: block; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
 
 .hero h1 { font-family: var(--serif); font-size: clamp(2.6rem, 5vw, 4.2rem); font-weight: 500; line-height: 1.2; letter-spacing: -.02em; color: var(--ink); margin-bottom: 2.5rem; }
@@ -491,7 +491,7 @@ nav#nav.scrolled { height: 62px; box-shadow: 0 2px 20px rgba(15,75,69,.25); }
 .gc-result-card {
   display: flex; align-items: center; gap: 12px;
   background: var(--white); border: 1.5px solid rgba(15,75,69,.12);
-  border-radius: var(--r-md); padding: 1rem 1.25rem; width: 100%;
+  border-radius: var(--r-md); padding: 1rem .75rem; width: 100%;
   opacity: 0; transform: translateY(10px);
   transition: opacity .4s ease, transform .4s ease;
   box-shadow: 0 4px 16px rgba(15,75,69,.08);
@@ -514,9 +514,9 @@ nav#nav.scrolled { height: 62px; box-shadow: 0 2px 20px rgba(15,75,69,.25); }
 .gc-chart-num { font-family: var(--serif); font-size: 2rem; font-weight: 600; color: var(--blue); }
 .gc-chart-lbl { font-size: .75rem; color: var(--ink-muted); display: block; }
 
-.gc-chart-wrap { display: flex; flex-direction: column; max-width:100%; align-items: center; gap: 10px; width: 100%;  }
+.gc-chart-wrap { display: flex; flex-direction: column; max-width:100%; align-items: center; gap: 10px; width: 100%;  padding: 0 2rem; }
 
-.gc-bar-wrap { display: flex; flex-direction: column; align-items: center; gap: 4px; flex: 1; height: 100%; justify-content: flex-end; }
+.gc-bar-wrap { display: flex; flex-direction: column; align-items: center; gap: 4px; flex: 1; height: 100%; justify-content: flex-end; padding: 0 .4rem; }
 .gc-bar {
   width: 100%; border-radius: 4px 4px 0 0; height: 0;
   background: var(--blue-pale);
@@ -586,7 +586,7 @@ height: fit-content;}
 
 @media (max-width: 768px) {
   .hero-mockup-wrap { padding-left: 0; padding-right: 0; }
-  .gc-stage { padding: 1.25rem 1rem; }
+  .gc-stage { padding: 1.25rem 0rem; }
   .gc-notif { padding: .75rem 1rem; }
   .gc-review-card { padding: .75rem 1rem; }
 }
@@ -1107,7 +1107,7 @@ background-image: var(--footer-grad-dark-img); border-top: 1px solid rgba(26, 12
           <div class="gc-rank-badge"># 1</div>
           <div class="gc-result-info">
             <div class="gc-result-title">Your Business</div>
-            <div class="gc-result-sub">yourbusiness.com · ⭐ 4.9</div>
+            <div class="gc-result-sub">yourbusiness.com · ⭐&nbsp;4.9</div>
           </div>
           <div class="gc-map-pin">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--blue)" stroke="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
