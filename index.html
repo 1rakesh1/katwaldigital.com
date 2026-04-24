@@ -163,10 +163,24 @@
 
   --grad-dark: #0d1f1e;
   --grad-dark-img: radial-gradient(ellipse at 70% 35%, #1A7A70 0%, transparent 85%);
+
+--footer-grad-dark: #1a3330;
+--footer-grad-dark-img:
+  radial-gradient(ellipse at 75% 20%,
+    rgba(26, 122, 112, 0.5) 0%,
+    rgba(26, 122, 112, 0.2) 35%,
+    rgba(26, 122, 112, 0) 60%),
+  radial-gradient(ellipse at 20% 80%,
+    rgba(26, 122, 112, 0.3) 0%,
+    rgba(26, 122, 112, 0.1) 30%,
+    rgba(26, 122, 112, 0) 55%);
 }
 
 
-html { scroll-behavior: smooth; }
+html { 
+  scrollbar-gutter: stable;
+  scroll-behavior: smooth; }
+
 body { font-family: var(--sans); background: var(--white); color: var(--ink-mid); line-height: 1.7; overflow-x: hidden; }
 
 
@@ -485,7 +499,7 @@ nav#nav.scrolled { height: 62px; box-shadow: 0 2px 20px rgba(15,75,69,.25); }
 
 .gc-result-card.show { opacity: 1; transform: translateY(0); }
 .gc-rank-badge {
-  font-size: .7rem; font-weight: 700; color: white;
+  font-size: .8rem; font-weight: 500; color: white;
   background: var(--blue); border-radius: 5px; padding: 4px 8px; flex-shrink: 0;
 }
 .gc-result-title { font-size: .9rem; font-weight: 500; color: var(--ink); }
@@ -785,11 +799,12 @@ background-image: var(--grad-teal-img); padding: 48px 6%; }
 .cbadge-text .c-val { font-size: .88rem; color: var(--ink); font-weight: 400; }
 
 /* ── FOOTER ── */
-footer { background: var(--grad-dark);
-background-image: var(--grad-dark-img); padding: 4rem 6% 2rem; }
+footer { background: var(--footer-grad-dark);
+background-image: var(--footer-grad-dark-img); border-top: 1px solid rgba(26, 122, 112, 0.25); padding: 4rem 6% 2rem; }
+
 .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,.08); margin-bottom: 2rem; }
 .footer-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; }
-.footer-logo-text { font-family: var(--serif); font-size: .95rem; font-weight: 600; color: rgba(255,255,255,.7); }
+.footer-logo-text { font-family: var(--serif); font-size: 1.4rem; font-weight: 600; color: rgba(255,255,255,.7); }
 .footer-logo-text span { color: var(--gold); }
 .footer-entity {
   font-size: .85rem; font-weight: 300; color: rgba(255,255,255,.4); line-height: 1.7; max-width: 260px; margin-bottom: 1.25rem;
@@ -805,11 +820,9 @@ background-image: var(--grad-dark-img); padding: 4rem 6% 2rem; }
 .footer-col-nav a::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 1.5px; background: var(--gold-lt); border-radius: 2px; transition: width .25s ease; }
 
 .footer-col-nav a:hover::after { width: 100%;}
-/*
-.footer-col-nav a.active { color: #fff; }
-.footer-col-nav a.active::after { width: 100%; }*/
 
-.footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;}
+.footer-bottom { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem; }
+
 .footer-copy { font-size: .72rem; color: rgba(255,255,255,.2); letter-spacing: .03em; }
 .footer-made { font-size: .72rem; color: rgba(255,255,255,.2); }
 .footer-made span { color: rgba(196,149,42,.5); }
@@ -1091,13 +1104,13 @@ background-image: var(--grad-dark-img); padding: 4rem 6% 2rem; }
           <span id="gc-typed"></span><span class="gc-cursor">|</span>
         </div>
         <div class="gc-result-card" id="gc-result-card">
-          <div class="gc-rank-badge">#1</div>
+          <div class="gc-rank-badge"># 1</div>
           <div class="gc-result-info">
             <div class="gc-result-title">Your Business</div>
             <div class="gc-result-sub">yourbusiness.com · ⭐ 4.9</div>
           </div>
           <div class="gc-map-pin">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue)" stroke="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--blue)" stroke="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
           </div>
         </div>
        
@@ -1118,7 +1131,7 @@ background-image: var(--grad-dark-img); padding: 4rem 6% 2rem; }
           </div>
           <div class="gc-chart-meta">
             <span class="gc-chart-num" id="gc-visitors">0</span>
-            <span class="gc-chart-lbl">visitors this week</span>
+            <span class="gc-chart-lbl">Visitors this week</span>
           </div>
         </div>
     
@@ -1140,7 +1153,10 @@ background-image: var(--grad-dark-img); padding: 4rem 6% 2rem; }
           </div>
           <div class="gc-notif" id="gc-n1">
             <div class="gc-notif-icon" style="background:var(--gold-pale);">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--gold)" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12.004 2C6.477 2 2 6.477 2 12.004c0 1.771.463 3.432 1.27 4.872L2 22l5.247-1.252A9.96 9.96 0 0 0 12.004 22C17.523 22 22 17.523 22 12.004 22 6.477 17.523 2 12.004 2zm0 18.189a8.184 8.184 0 0 1-4.17-1.142l-.299-.177-3.103.739.771-3.021-.195-.31A8.19 8.19 0 1 1 12.004 20.19z"/>
+            </svg>
             </div>
             <div>
               <div class="gc-notif-title">WhatsApp enquiry</div>
