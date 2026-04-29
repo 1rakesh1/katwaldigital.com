@@ -6,8 +6,8 @@
 :root {
   --cursor-color:       #1A7A70;   /* ring / dot base colour   */
   --cursor-color-hover: #2a9e91;   /* ring / dot hover colour  */
-  --cursor-ring-size:   48px;      /* default ring diameter    */
-  --cursor-ring-hover:  64px;      /* ring diameter on hover   */
+  --cursor-ring-size:   64px;      /* default ring diameter    */
+  --cursor-ring-hover:  80px;      /* ring diameter on hover   */
   --cursor-dot-size:    6px;       /* centre dot diameter      */
 }
 
