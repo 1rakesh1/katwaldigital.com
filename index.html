@@ -27,7 +27,7 @@
 <link rel="canonical" href="https://katwaldigital.com/">
 <link rel="icon" type="image/png" href="favicon.png">
 
-<meta name="theme-color" content="#1A7A70">
+<meta name="theme-color" content="#0F4B45">
 
 <script type="application/ld+json">
 {
@@ -313,9 +313,22 @@ nav#nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
   display: flex; align-items: center; justify-content: space-between;
   padding: 0 6%; height: 72px;
-  background: var(--grad-teal);
-  background-image: var(--grad-teal-img);
-  border-bottom: 1px solid rgba(255,255,255,.08);
+
+  /* --- PREMIUM BRANDED GLASS --- */
+  
+  /* 1. A gradient using your light teal and dark teal to keep the color rich and vibrant */
+  background: var(--blue);
+
+  /* 2. The blur effect */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  
+  /* 3. The "Glass Edge" - an inner highlight and an outer soft shadow */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 8px 30px rgba(15, 75, 69, 0.15);
+
   transition: height .3s, transform .6s cubic-bezier(0.4, 0, 0.2, 1), box-shadow .3s;
 }
 
@@ -323,7 +336,15 @@ nav#nav.nav-hidden {
   transform: translateY(-100%);
 }
 
-nav#nav.scrolled { height: 62px; box-shadow: 0 2px 20px rgba(15,75,69,.25); }
+nav#nav.scrolled { 
+  height: 62px; 
+ 
+  /* Makes the glass slightly more solid when scrolling so text remains readable */
+  background: var(--blue);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 4px 20px rgba(15, 75, 69, 0.3);
+}
 
 .nav-left { display: flex; align-items: center; gap: 14px; }
 .nav-logo-text { font-family: var(--serif); font-size: 1.4rem; font-weight: 600; color: #fff; text-decoration: none; letter-spacing: .01em; }
