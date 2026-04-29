@@ -5,13 +5,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Katwal Digital | Digital Growth for Small Businesses</title>
-<meta name="description" content="Katwal Digital helps small businesses get found on Google, attract more visitors, generate leads, and build lasting trust online. Based in India, serving clients globally.">
+<meta name="description" content="Katwal Digital is a digital marketing and web design studio helping small businesses attract more customers through Google, social media, and a website that converts. Based in India, serving clients globally.">
 
 <!--These control how your page looks when shared on WhatsApp, LinkedIn, Facebook, etc. Also used by AI search crawlers to understand page identity. Without them, shares show no image, a broken title, or nothing at all.-->
 <meta property="og:type" content="website">
 <meta property="og:url"  content="https://katwaldigital.com/">
 <meta property="og:title" content="Katwal Digital | Digital Growth for Small Businesses">
-<meta property="og:description" content="Katwal Digital helps small businesses get found on Google, attract more visitors, generate leads, and build lasting trust online. Based in India, serving clients globally.">
+<meta property="og:description" content="Katwal Digital is a digital marketing and web design studio helping small businesses attract more customers through Google, social media, and a website that converts. Based in India, serving clients globally.">
 <meta property="og:image"  content="https://katwaldigital.com/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -27,14 +27,14 @@
 <link rel="canonical" href="https://katwaldigital.com/">
 <link rel="icon" type="image/png" href="favicon.png">
 
-<meta name="theme-color" content="#0F4B45">
+<meta name="theme-color" content="#1A7A70">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "Katwal Digital",
-  "description": "Katwal Digital is a digital growth studio based in India. We help small businesses get found online, attract visitors, generate leads, and build trust — through local SEO, fast websites, AI chat, WhatsApp automation, reviews strategy, and monthly care plans. We work with clients globally.",
+  "description": "Katwal Digital is a digital marketing and web design studio based in India. We help small businesses attract more customers through SEO, social media marketing, web design, AI chat, WhatsApp automation, reviews strategy, and monthly care plans. We work with clients globally.",
   "url": "https://katwaldigital.com",
   "logo": "https://katwaldigital.com/logo.svg",
   "email": "hello@katwaldigital.com",
@@ -317,7 +317,7 @@ nav#nav {
   /* --- PREMIUM BRANDED GLASS --- */
   
   /* 1. A gradient using your light teal and dark teal to keep the color rich and vibrant */
-  background: var(--blue);
+  background: var(--blue-lt);
 
   /* 2. The blur effect */
   backdrop-filter: blur(16px);
@@ -340,7 +340,7 @@ nav#nav.scrolled {
   height: 62px; 
  
   /* Makes the glass slightly more solid when scrolling so text remains readable */
-  background: var(--blue);
+  background: var(--blue-lt);
   box-shadow: 
     inset 0 1px 0 rgba(255, 255, 255, 0.1),
     0 4px 20px rgba(15, 75, 69, 0.3);
@@ -1073,7 +1073,7 @@ background-image: var(--footer-grad-dark-img); border-top: 1px solid rgba(26, 12
 
 <body>
 
-<nav id="nav">
+<nav id="nav" aria-label="Main navigation">
   <div class="nav-left">
     <img src="header-logo.svg" alt="Katwal Digital" width="120" height="32" fetchpriority="high" style="height:32px;width:auto;">
     <a href="#" class="nav-logo-text">Katwal <span>Digital</span></a>
@@ -1088,7 +1088,7 @@ background-image: var(--footer-grad-dark-img); border-top: 1px solid rgba(26, 12
   Free Consultation
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
   </a>
-  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <button class="burger" id="burger" aria-label="Open mobile menu"><span></span><span></span><span></span></button>
 </nav>
 
 <div class="mobile-menu" id="mobile-menu">
@@ -1098,13 +1098,15 @@ background-image: var(--footer-grad-dark-img); border-top: 1px solid rgba(26, 12
   <a href="#contact" onclick="closeMobile()">Free Consultation</a>
 </div>
 
+<main aria-label="Digital growth services for small businesses ">
+
 <!-- HERO -->
-<section class="hero">
+<section class="hero" aria-label="Introduction">
 
   <div class="hero-inner">
     <div class="hero-eyebrow">Digital Growth Partner for Small Businesses</div>
     <h1>More Visibility. More&nbsp;Leads.<em> More&nbsp;Business.</em></h1>
-     <p class="hero-sub">We help small businesses attract more customers online — with local SEO, a fast website that converts, and smart tools that turn visitors into enquiries and enquiries into paying customers.</p>
+     <p class="hero-sub">We help small businesses attract more customers online — with local SEO, social media, a converting website, and smart tools that turn visitors into enquiries.</p>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">Free Consultation <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       <a href="#work" class="btn-secondary">See Our Work</a>
@@ -1264,12 +1266,12 @@ background-image: var(--footer-grad-dark-img); border-top: 1px solid rgba(26, 12
 </div>
 
 <!-- SERVICES -->
-<section id="services">
+<section id="services" aria-label="Services offered by Katwal Digital">
   <div class="reveal">
     <div class="section-label">Services</div>
     <h2>Everything your business needs <span class="br-desktop"><em>— to attract and convert customers.</em></span></h2>
     <p class="section-sub">
-      We don't just build websites. We build the complete digital system that gets you found, brings in the right visitors, turns them into enquiries, and builds the trust that makes them choose you.
+      From Google and social media to your website and beyond — we manage every part of your digital presence so the right customers find you, trust you, and choose you.
     </p>
   </div>
 
@@ -1376,7 +1378,7 @@ background-image: var(--footer-grad-dark-img); border-top: 1px solid rgba(26, 12
 
 
 <!-- WORK -->
-<section id="work">
+<section id="work" aria-label="Recent client projects and portfolio">
   <div class="reveal">
     <div class="section-label">Our work</div>
     <h2>Every client gets our<br><em>full attention.</em></h2>
@@ -1432,7 +1434,7 @@ background-image: var(--footer-grad-dark-img); border-top: 1px solid rgba(26, 12
 </section>
 
 <!-- TESTIMONIAL -->
-<section id="testimonial">
+<section id="testimonial" aria-label="Client testimonials">
   <div class="testimonial-inner reveal">
     <div class="testimonial-divider"></div>
     <p class="testimonial-quote">As a startup in Zurich, Valoreye GmbH made significant progress thanks to Katwal Digital. They successfully reached the right target audience and showed a strong understanding of our vision."</p>
@@ -1448,7 +1450,7 @@ background-image: var(--footer-grad-dark-img); border-top: 1px solid rgba(26, 12
 </section>
 
 <!-- PROCESS -->
-<section id="process">
+<section id="process" aria-label="How we work - our process">
   <div class="reveal" style="text-align:center;max-width:560px;margin:0 auto 4rem;">
     <div class="section-label" style="justify-content:center;">How we work</div>
     <h2>Simple, clear,<br><em>no surprises.</em></h2>
@@ -1463,7 +1465,7 @@ background-image: var(--footer-grad-dark-img); border-top: 1px solid rgba(26, 12
 </section>
 
 <!-- ABOUT -->
-<section id="about">
+<section id="about" aria-label="About Katwal Digital">
   <div class="about-inner">
     <div class="about-copy reveal">
       <div class="section-label">Who we are</div>
@@ -1490,7 +1492,7 @@ background-image: var(--footer-grad-dark-img); border-top: 1px solid rgba(26, 12
 </section>
 
 <!-- FAQ -->
-<section id="faq">
+<section id="faq" aria-label="Frequently asked questions about working with Katwal Digital">
   <div class="reveal" style="text-align:center; max-width:560px; margin:0 auto 3rem;">
     <div class="section-label" style="justify-content:center;">FAQ</div>
     <h2>Good questions.<br><em>Honest answers.</em></h2>
@@ -1629,8 +1631,10 @@ background-image: var(--footer-grad-dark-img); border-top: 1px solid rgba(26, 12
   </div>
 </section>
 
+</main>
+
 <!-- FOOTER -->
-<footer>
+<footer aria-label="Site footer">
   <div class="footer-top">
     <div>
       <div class="footer-brand">
